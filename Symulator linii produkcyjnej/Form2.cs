@@ -31,7 +31,7 @@ namespace Symulator_linii_produkcyjnej
 
         public void LosoweAwarie()
         {
-            int awaria = rng.Next(10000, 30001);  // awaria wystapi w czasie od 10 do 30 sekund
+            int awaria = rng.Next(30000, 60001);  // awaria wystapi w czasie od 30 do 60 sekund
             zegarawarii.Interval= awaria;
             zegarawarii.Start();
         }
@@ -42,16 +42,19 @@ namespace Symulator_linii_produkcyjnej
             zegarobecnosci.Start();
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            zegarawarii.Stop();
-            MessageBox.Show("Nastąpiła nieprzewidziana awaria, proszę zresetuj linię produkcyjną");
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
             button1.Visible= false;
+            nieobecnosc=false;
             Obecnosc();
+        }
+
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            zegarawarii.Stop();
+            MessageBox.Show("Nastąpiła nieprzewidziana awaria, proszę zresetuj linię produkcyjną");
         }
 
         private void timer2_Tick(object sender, EventArgs e)
