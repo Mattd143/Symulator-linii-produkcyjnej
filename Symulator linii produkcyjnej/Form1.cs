@@ -22,9 +22,8 @@ namespace Symulator_linii_produkcyjnej
         {
             if (textBox2.Text == "projekt")
             {
-                this.glowne = new Main();
+                this.glowne = new Main(textBox1.Text);
                 glowne.ShowDialog();
-                this.Hide();
             }
             else
             {
