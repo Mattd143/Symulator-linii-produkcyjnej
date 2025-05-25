@@ -16,7 +16,7 @@ namespace Symulator_linii_produkcyjnej
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Login());
         }
     }
 }

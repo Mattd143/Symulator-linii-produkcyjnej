@@ -10,11 +10,26 @@ using System.Windows.Forms;
 
 namespace Symulator_linii_produkcyjnej
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
-        public Form1()
+        public Login()
         {
             InitializeComponent();
+            this.glowne = null;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (textBox2.Text == "projekt")
+            {
+                this.glowne = new Main();
+                glowne.ShowDialog();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Nieprawidłowe hasło.");
+            }
         }
     }
 }
