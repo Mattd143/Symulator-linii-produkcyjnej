@@ -86,7 +86,7 @@ namespace Symulator_linii_produkcyjnej
             }
             else if (cisnienie > 120)
             {
-                label10.Visible= true;
+                label10.Visible= true;  
                 label10.Text = $"UWAGA: Ciśnienie zbyt wysokie! Otwórz zawór bezpieczeństwa";
             }
             else if (cpu > 70)
@@ -132,7 +132,7 @@ namespace Symulator_linii_produkcyjnej
             if (!nieobecnosc)
             {
                 zegarobecnosci.Stop();
-                zegarobecnosci.Interval = 10000;
+                zegarobecnosci.Interval = 20000;
                 zegarobecnosci.Start();
                 nieobecnosc = true;
             }
